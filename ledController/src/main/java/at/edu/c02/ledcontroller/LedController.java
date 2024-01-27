@@ -13,4 +13,6 @@ public interface LedController {
     void outputGroupStatus() throws IOException;
 
     void outputStatus(String id) throws IOException;
+
+    void doCircleLight() throws Exception;
 }

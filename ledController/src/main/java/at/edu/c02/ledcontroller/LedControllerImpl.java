@@ -74,4 +74,18 @@ public class LedControllerImpl implements LedController {
         System.out.println("LED " + light.getInt("id") + " is currently " + (light.getBoolean("on") ? "on" : "off") + ". Color: " + light.getString("color"));
     }
 
+    public void doCircleLight() throws Exception {
+        // switch off all lights
+        turnOffAllLeds();
+
+        JSONArray lights = getGroupLeds();
+        for (int i = 0; i < lights.length(); i++) {
+            JSONObject light = lights.getJSONObject(i);
+            apiService.setLight(light.getInt("id")+"", "#f00", true);
+            // wait 1s
+            Thread.sleep(1000);
+            apiService.setLight(light.getInt("id")+"", "#f00", false);
+        }
+    }
+
 }
