@@ -1,0 +1,11 @@
+Sprint Planing:
+
+    @Tom: Startet mit 2.3 - 5 Story Points
+    @B&P: Starten mit 2.2 - 5 Story Points
+
+    Backlog:
+        @Tom: 2.4 - 5 Story Points
+        @B&P: 2.5 - 5 Story Points
+
+
+Ziel: 10 Story Points
