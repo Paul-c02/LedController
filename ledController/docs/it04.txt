@@ -20,3 +20,10 @@ Daily 02:
 
     @B&P: still working on 2.2 tests, issues with mocking api - wurden von "freundlichen" Kundengesprächen abgelenkt :-)
     @Tom: still working on 2.3 tests
+
+Retro:
+
+    Stories 2.2 und 2.3 erledigt - 10 Story Points
+    Remote zusammenarbeit hat gut geklappt!
+
+    Sprintziele erreicht!
