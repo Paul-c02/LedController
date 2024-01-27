@@ -3,6 +3,7 @@ package at.edu.c02.ledcontroller;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,8 +11,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
 
 
 public class LedControllerTest {
@@ -41,4 +42,22 @@ public class LedControllerTest {
        assertEquals(ledController.getGroupLeds().get(0).toString(),group.get(0).toString());
 
     }
+
+    @Test
+    public void testDoCircleLight() throws Exception {
+        // Arrange
+        ApiService apiService = Mockito.mock(ApiService.class);
+        LedController ledController = new LedControllerImpl(apiService);
+        JSONObject light = new JSONObject();
+        light.put("id", 1);
+        JSONArray lights = new JSONArray();
+        lights.put(light);
+        when(apiService.getLights()).thenReturn(readJsonFile("src/test/resources/getLights.json"));
+
+        ledController.doCircleLight();
+
+        Mockito.verify(apiService, times(1)).setLight("20", "#f00", true);
+        Mockito.verify(apiService, times(2)).setLight("20", "#f00", false);
+    }
+
 }
