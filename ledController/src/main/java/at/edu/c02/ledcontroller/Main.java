@@ -10,7 +10,7 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         LedController ledController = new LedControllerImpl(new ApiServiceImpl());
-
+        ledController.turnOffAllLeds();
         String input = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ledController.getGroupLeds();
