@@ -7,8 +7,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class ApiServiceEndToEndTest {
 
@@ -48,6 +47,13 @@ public class ApiServiceEndToEndTest {
         ApiService apiService = mock(ApiService.class);
         LedController ledController = new LedControllerImpl(apiService);
         ledController.turnOffAllLeds();
-
+        verify(apiService).setLight("20", "#f00", false);
+        verify(apiService).setLight("21", "#f00", false);
+        verify(apiService).setLight("22", "#f00", false);
+        verify(apiService).setLight("23", "#f00", false);
+        verify(apiService).setLight("24", "#f00", false);
+        verify(apiService).setLight("25", "#f00", false);
+        verify(apiService).setLight("26", "#f00", false);
+        verify(apiService).setLight("27", "#f00", false);
     }
 }
