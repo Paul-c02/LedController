@@ -51,6 +51,15 @@ public class LedControllerImpl implements LedController {
     }
 
     @Override
+    public void turnOffAllLeds() throws IOException {
+        Integer[] group = {20, 21, 22, 23, 24, 25, 26, 27};
+        for (int i = 0; i < group.length; i++) {
+            this.apiService.setLight(group[i].toString(), "#f00", false);
+        }
+    }
+
+
+    @Override
     public void outputGroupStatus() throws IOException {
         JSONArray lights = getGroupLeds();
         for (int i = 0; i < lights.length(); i++) {
