@@ -15,3 +15,8 @@ Daily 01:
 
     @B&P: 2.2 implementiert und gepusht - Working on Tests
     @Tom: 2.3 implementiert - working on tests
+
+Daily 02:
+
+    @B&P: still working on 2.2 tests, issues with mocking api - wurden von "freundlichen" Kundengesprächen abgelenkt :-)
+    @Tom: still working on 2.3 tests
