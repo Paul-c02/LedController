@@ -21,3 +21,11 @@ Daily 2:
 
     @B&P: Cleanup and Optimizing vom Code und den Tests, Planung zu 2.2
     @Tom: WIP bei 2.1 - finishing Tests zu 2.1
+
+Sprint Retro:
+
+    @Tom: Story 2.1 erledigt - 5 Story Points
+    @B&P: Story 1.3 erledigt und Optimiert - 3 Story Points
+
+    Sprint Ziel wurde erreicht
+    Planung zu weiteren Schritten wurde ausgeführt aber mit der Implementierung noch nicht begonnen
