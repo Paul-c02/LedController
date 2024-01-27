@@ -5,6 +5,11 @@ import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class ApiServiceEndToEndTest {
 
     private ApiService apiService;
@@ -38,5 +43,11 @@ public class ApiServiceEndToEndTest {
         Assert.assertEquals(color, light.getString("color"));
         Assert.assertEquals(state, light.getBoolean("on"));
     }
+    @Test
+    public void testMockAPIAllOff() throws IOException {
+        ApiService apiService = mock(ApiService.class);
+        LedController ledController = new LedControllerImpl(apiService);
+        ledController.turnOffAllLeds();
 
+    }
 }
